@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import CatchingPokemonTwoToneIcon from "@mui/icons-material/CatchingPokemonTwoTone";
+import { Link } from "react-router-dom";
 
 const pages = ["Pokemon", "Moves", "Items"];
 const settings = ["Account", "Dashboard", "Logout"];
@@ -43,23 +44,32 @@ const Header = () => {
     <AppBar position="static" sx={{ backgroundColor: "#323232" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <CatchingPokemonTwoToneIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-          />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              color: "inherit",
+          <Link
+            to={"/"}
+            style={{
               textDecoration: "none",
+              color: "white",
+              display: "flex",
+              alignItems: "center",
             }}>
-            Poke-App
-          </Typography>
+            <CatchingPokemonTwoToneIcon
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontWeight: 700,
+                color: "inherit",
+                textDecoration: "none",
+              }}>
+              Poke-App
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -95,6 +105,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
+
           <CatchingPokemonTwoToneIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
           />
@@ -111,18 +122,28 @@ const Header = () => {
               color: "inherit",
               textDecoration: "none",
             }}>
-            Poke-App
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              Poke-App
+            </Link>
           </Typography>
+
+          {/* options */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}>
-                {page}
+            <Link to="/pokemon" style={{ textDecoration: "none" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Pokemon
               </Button>
-            ))}
+            </Link>
+
+            <Button sx={{ my: 2, color: "white", display: "block" }}>
+              Moves
+            </Button>
+
+            <Button sx={{ my: 2, color: "white", display: "block" }}>
+              Items
+            </Button>
           </Box>
+          {/*  */}
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

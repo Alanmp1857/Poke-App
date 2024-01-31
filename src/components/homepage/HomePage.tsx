@@ -14,6 +14,7 @@ const HomePage = () => {
           margin: "20px",
           borderRadius: "20px",
         }}>
+        {/* charizard image */}
         <div
           style={{
             display: "flex",
@@ -26,9 +27,14 @@ const HomePage = () => {
             style={{ height: "300px", width: "50%", borderRadius: "50%" }}
           />
         </div>
+        {/*  */}
+
+        {/* Welcome message */}
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <img src={image} alt="" />
+          <img src={image} alt="message" style={{ width: "60%" }} />
         </div>
+        {/*  */}
+
         <div
           style={{
             display: "flex",
