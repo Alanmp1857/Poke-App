@@ -14,7 +14,6 @@ import MenuItem from "@mui/material/MenuItem";
 import CatchingPokemonTwoToneIcon from "@mui/icons-material/CatchingPokemonTwoTone";
 import { Link } from "react-router-dom";
 
-const pages = ["Pokemon", "Moves", "Items"];
 const settings = ["Account", "Dashboard", "Logout"];
 
 const Header = () => {
@@ -98,11 +97,17 @@ const Header = () => {
               sx={{
                 display: { xs: "block", md: "none" },
               }}>
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              {/* options for mobile view */}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link
+                  to="/pokemon"
+                  style={{ textDecoration: "none", color: "black" }}>
+                  <Typography textAlign="center">Pokemon</Typography>
+                </Link>
+                <Typography textAlign="center">Moves</Typography>
+                <Typography textAlign="center">Items</Typography>
+              </MenuItem>
+              {/*  */}
             </Menu>
           </Box>
 

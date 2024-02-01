@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage.tsx";
-import Pokemon from "./components/pokemon/Pokemon.tsx";
 import HomePage from "./components/homepage/HomePage.tsx";
+import PokemonList from "./components/pokemon/PokemonList.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,20 +18,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/pokemon",
-        element: <Pokemon />,
+        element: <PokemonList />,
       },
     ],
   },
-  // {
-  //   path: "*",
-  //   element: <Pokemon />,
-  //   errorElement: <ErrorPage />,
-  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    {/* <App /> */}
   </React.StrictMode>
 );

@@ -1,7 +1,6 @@
 import Header from "./components/header/Header";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-// import HomePage from "./components/homepage/HomePage";
 import { Outlet } from "react-router-dom";
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
     <div>
       <Header />
       <Outlet />
-      {/* <HomePage /> */}
       <Footer />
     </div>
   );
