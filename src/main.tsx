@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage.tsx";
 import HomePage from "./components/homepage/HomePage.tsx";
 import PokemonList from "./components/pokemon/PokemonList.tsx";
+import MovesList from "./components/moves/MovesList.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/pokemon",
         element: <PokemonList />,
+      },
+      {
+        path: "/moves",
+        element: <MovesList />,
       },
     ],
   },

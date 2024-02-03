@@ -14,60 +14,60 @@ const Footer = () => {
   };
 
   return (
-    <BottomNavigation
-      sx={{
-        width: "100%",
-        backgroundColor: "#323232",
-        bottom: 0,
-        position: "relative",
-      }}
-      value={value}
-      onChange={handleChange}>
-      <BottomNavigationAction
+    <div style={{ marginTop: "auto" }}>
+      <BottomNavigation
         sx={{
-          color: "darkgrey",
-          "&.Mui-selected": {
-            color: "white",
-          },
+          width: "100%",
+          backgroundColor: "#323232",
         }}
-        label="Recents"
-        value="recents"
-        icon={<RestoreIcon />}
-      />
-      <BottomNavigationAction
-        sx={{
-          color: "darkgrey",
-          "&.Mui-selected": {
-            color: "white",
-          },
-        }}
-        label="Favorites"
-        value="favorites"
-        icon={<FavoriteIcon />}
-      />
-      <BottomNavigationAction
-        sx={{
-          color: "darkgrey",
-          "&.Mui-selected": {
-            color: "white",
-          },
-        }}
-        label="Nearby"
-        value="nearby"
-        icon={<LocationOnIcon />}
-      />
-      <BottomNavigationAction
-        sx={{
-          color: "darkgrey",
-          "&.Mui-selected": {
-            color: "white",
-          },
-        }}
-        label="Folder"
-        value="folder"
-        icon={<FolderIcon />}
-      />
-    </BottomNavigation>
+        value={value}
+        onChange={handleChange}>
+        <BottomNavigationAction
+          sx={{
+            color: "darkgrey",
+            "&.Mui-selected": {
+              color: "white",
+            },
+          }}
+          label="Recents"
+          value="recents"
+          icon={<RestoreIcon />}
+        />
+        <BottomNavigationAction
+          sx={{
+            color: "darkgrey",
+            "&.Mui-selected": {
+              color: "white",
+            },
+          }}
+          label="Favorites"
+          value="favorites"
+          icon={<FavoriteIcon />}
+        />
+        <BottomNavigationAction
+          sx={{
+            color: "darkgrey",
+            "&.Mui-selected": {
+              color: "white",
+            },
+          }}
+          label="Nearby"
+          value="nearby"
+          icon={<LocationOnIcon />}
+        />
+        <BottomNavigationAction
+          sx={{
+            color: "darkgrey",
+            "&.Mui-selected": {
+              color: "white",
+            },
+          }}
+          label="Folder"
+          value="folder"
+          icon={<FolderIcon />}
+        />
+      </BottomNavigation>
+    </div>
   );
 };
 

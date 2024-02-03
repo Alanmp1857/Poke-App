@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#323232" }}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#323232" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link
@@ -140,9 +140,11 @@ const Header = () => {
               </Button>
             </Link>
 
-            <Button sx={{ my: 2, color: "white", display: "block" }}>
-              Moves
-            </Button>
+            <Link to="/moves" style={{ textDecoration: "none" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Moves
+              </Button>
+            </Link>
 
             <Button sx={{ my: 2, color: "white", display: "block" }}>
               Items

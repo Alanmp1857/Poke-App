@@ -5,7 +5,8 @@ import image from "../../assets/message.png";
 
 const HomePage = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}>
       <div
         style={{
           backgroundColor: "#666A6D",

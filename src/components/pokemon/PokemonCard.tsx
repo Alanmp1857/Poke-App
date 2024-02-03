@@ -13,14 +13,17 @@ interface PokemonCardProps {
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, height: 450 }}>
       {/* pokemon image */}
-      <CardMedia
-        component="img"
-        alt="pokemon"
-        height="300"
-        image={pokemon.sprites.other.home.front_default}
-      />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <CardMedia
+          component="img"
+          alt="pokemon"
+          style={{ width: 150, height: 150 }}
+          image={pokemon.sprites.other.home.front_default}
+        />
+      </div>
+
       {/*  */}
 
       <CardContent>
