@@ -23,9 +23,9 @@ const HomePage = () => {
             margin: "10px",
           }}>
           <img
-            src="https://e0.pxfuel.com/wallpapers/760/947/desktop-wallpaper-red-s-mega-charizard-x-po-png-pokemon-epic-charizard.jpg"
+            src="https://media1.tenor.com/m/HJNTpZmNpRAAAAAC/weather-trio-mega-rayquaza.gif"
             alt="charizard-img"
-            style={{ height: "300px", width: "50%", borderRadius: "50%" }}
+            style={{ height: "300px", width: "80%", borderRadius: "50%" }}
           />
         </div>
         {/*  */}

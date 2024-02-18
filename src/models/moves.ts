@@ -22,6 +22,10 @@ export interface MovesUrl {
   url: string;
 }
 
+export interface Colors {
+  [key: string]: string;
+}
+
 export interface Move {
   id: number;
   name: string;
@@ -31,4 +35,5 @@ export interface Move {
   damage_class: Damage;
   type: Type;
   effect_entries: Effect[];
+  effect_chance: number | null;
 }
